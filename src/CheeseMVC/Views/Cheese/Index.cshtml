@@ -1,6 +1,4 @@
 ﻿@{
-    Layout = null;
-      
 }
 
 <h1>My Cheese</h1>
@@ -13,7 +11,7 @@
 }
 
 <ul>
-    @foreach (string cheese in ViewBag.cheeses)
+    @foreach (KeyValuePair<string, string> cheese in ViewBag.cheeses)
     {
         <li>@cheese</li>
     }
