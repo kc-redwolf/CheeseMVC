@@ -34,5 +34,13 @@ namespace CheeseMVC.Controllers
             return Redirect("/Cheese");
 
         }
+
+        [HttpPost]
+        [Route("/Cheese/Delete")]
+        public IActionResult DeleteCheese(string cheese)
+        {
+            Cheeses.Remove(cheese);
+            return Redirect("/Cheese");
+        }
     }
 }
